@@ -1,9 +1,12 @@
 import { Router, Request, Response } from 'express';
-
+import imageRoute from './api/image';
 const routes = Router();
 
-routes.get('/', (req: Request, res: Response) => {
-  res.send('Welcome');
+routes.use('/image', imageRoute);
+
+routes.get('*', (req: Request, res: Response) => {
+  res.status(404);
+  res.send(`<h1> NOT FOUND </h1>`);
 });
 
 export default routes;
