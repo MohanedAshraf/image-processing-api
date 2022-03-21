@@ -1,1 +1,1 @@
-let myName: string = "Mohaned Ashraf";
+const myName = "Mohaned Ashraf";
