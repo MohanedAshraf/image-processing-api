@@ -6,7 +6,7 @@ routes.use('/image', imageRoute);
 
 routes.get('*', (req: Request, res: Response) => {
   res.status(404);
-  res.send(`<h1> NOT FOUND </h1>`);
+  res.send(`<h1> Page Not Found </h1>`);
 });
 
 export default routes;
