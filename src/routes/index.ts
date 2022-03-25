@@ -4,7 +4,7 @@ const routes = Router();
 
 routes.use('/image', imageRoute);
 
-routes.get('*', (req: Request, res: Response) => {
+routes.get('*', (req: Request, res: Response): void => {
   res.status(404);
   res.send(`<h1> Page Not Found </h1>`);
 });

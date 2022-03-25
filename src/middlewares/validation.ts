@@ -1,6 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 
-export const validation = (req: Request, res: Response, next: NextFunction) => {
+export const validation = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Response | void => {
   const { filename, width, height } = req.query;
 
   if (!filename) return res.status(404).send('Must include filename');
